@@ -565,7 +565,7 @@ def main(args: argparse.Namespace) -> None:
     dedup(filepath=source)
 
     domains = []
-    with open(source) as f:
+    with open(source, encoding="utf8") as f:
         domains = [x for x in f.readlines() if x and not x.startswith("#")]
 
     if not domains:
